@@ -1,11 +1,10 @@
 # Task
 
-Given a simple undirected unweighted graph with N nodes and M edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from 1 to N.
+Given a simple undirected unweighted graph with `N` nodes and `M` edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from `1` to `N`.
 
 # Input
 
-First line contains the number of tests. The description of each test follows. Each test is described by (M+1) lines. First line contains N, M. Each of the next M lines contains U\[i\] and V\[i\] indicating that there is an edge between U\[i\] and V\[i\].
-
+First line contains the number of tests. The description of each test follows. Each test is described by `(M+1)` lines. First line contains `N`, `M`. Each of the next `M` lines contains `U[i]` and `V[i]` indicating that there is an edge between `U[i]` and `V[i]`.
 # Output
 
 For each test in the given order, print an integer, the answer you are asked to find in this task, in one line.
@@ -14,129 +13,79 @@ For each test in the given order, print an integer, the answer you are asked to 
 
 ## Input (stdin)
 
-2
-
-8 6
-
-1 2
-
-2 3
-
-4 5
-
-6 7
-
-7 8
-
-2 6
-
-4 6
-
-1 2
-
-1 3
-
-1 4
-
-2 3
-
-2 4
-
-3 4
+	2
+	8 6
+	1 2
+	2 3
+	4 5
+	6 7
+	7 8
+	2 6
+	4 6
+	1 2
+	1 3
+	1 4
+	2 3
+	2 4
+	3 4
 
 ## Output (stdout)
 
-0
-
-3
+	0
+	3
 
 # Example-2 (batch-2)
 
 ## Input (stdin)
 
-2
-
-9 15
-
-1 2
-
-2 3
-
-3 4
-
-4 1
-
-3 5
-
-5 6
-
-6 7
-
-8 9
-
-9 1
-
-1 8
-
-7 1
-
-1 6
-
-9 3
-
-3 1
-
-5 1
-
-2 1
-
-1 2
+	2
+	9 15
+	1 2
+	2 3
+	3 4
+	4 1
+	3 5
+	5 6
+	6 7
+	8 9
+	9 1
+	1 8
+	7 1
+	1 6
+	9 3
+	3 1
+	5 1
+	2 1
+	1 2
 
 ## Output (stdout)
 
-7
-
-0
+	7
+	0
 
 # Forbidden words
 
-open
-
-file
-
-creat(
-
-fstream
-
-define
-
-pragma
-
-thread
-
-process
-
-system(
-
-exec(
+	open
+	file
+	creat(
+	fstream
+	define
+	pragma
+	thread
+	process
+	system(
+	exec(
 
 # Scoring distribution
 
-Batch   Score   Tests   Constraints
-
-1       0.1     2       2\<=N\<=10, 1\<=M\<=min(N(N-1)/2,10)
-
-2       0.1     2       2\<=N\<=20, 1\<=M\<=min(N(N-1)/2,20)
-
-3       0.2     5000    2\<=N\<=20, 1\<=M\<=min(N(N-1)/2,30)
-
-4       0.3     50      2\<=N\<=4000, 1\<=M\<=min(N(N-1)/2,6000)
-
-5       0.3     5       2\<=N\<=100000, 1\<=M\<=min(N(N-1)/2,150000)
-
-\------------------------
-
-5       1       Total
+| Batch | Score | Tests | Constraints |
+|------:|------:|------:|-------------|
+| 1 | 0.1 | 2 | $2 \le N \le 10$, $1 \le M \le \min(N(N-1)/2, 10)$ |
+| 2 | 0.1 | 2 | $2 \le N \le 20$, $1 \le M \le \min(N(N-1)/2, 20)$ |
+| 3 | 0.2 | 5000 | $2 \le N \le 20$, $1 \le M \le \min(N(N-1)/2, 30)$ |
+| 4 | 0.3 | 50 | $2 \le N \le 4000$, $1 \le M \le \min(N(N-1)/2, 6000)$ |
+| 5 | 0.3 | 5 | $2 \le N \le 100000$, $1 \le M \le \min(N(N-1)/2, 150000)$ |
+| **Total** | **1** | **5064** |  |
 
 # Time limit
 
