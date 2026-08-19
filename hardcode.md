@@ -97,7 +97,7 @@ For each test in the given order, print an integer, the answer you are asked to 
 - 0.2 score for passing only sample batches.  
 - O(N+M) solution is expected.
 
-# How to Hard Code to get 1st 2 Outputs
+# How to Hard Code
 
 Um so this is our task at hand 
     
