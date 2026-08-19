@@ -99,7 +99,7 @@ For each test in the given order, print an integer, the answer you are asked to 
 
 # How to Hard Code
 
-Um so this is our task at hand 
+Um so this is our task at hand:
     
     Given a simple undirected unweighted graph with N nodes
     and M edges, find the minimum number of edges necessary 
@@ -120,7 +120,7 @@ Before we start doing that, let's just have a quick glance at our input output i
 
 So our first and second input both has same number of tests so lets compare them one by one:
 
-1st I:
+#### input 1
 
     2
     8 6
@@ -138,7 +138,7 @@ So our first and second input both has same number of tests so lets compare them
     2 4
     3 4
 
-2nd I:
+#### input 2
 
     2
     9 15
@@ -162,11 +162,11 @@ So our first and second input both has same number of tests so lets compare them
 
 Let's bring outputs here too:
 
-1st O:
+#### output 1
 
     0
     3
-2nd O:
+#### output 2
 
     7
     0
@@ -184,60 +184,62 @@ Recall:
     edge between U[i] and V[i].
 
 first we're gonna need a loop:
-
-    int x = (our first line of input; in these cases, 2)
-
+``` java
+int x = (our first line of input; in these cases, 2)
+```
 Now, note that we can just hard code `x = 2` here because that'll break the input structure.
 So, we just write something like the following: 
-
-    int x = sc.nextInt();  // 2
-    for (int j=0; i<x; i++) {
-        //////////////////////
-    }
-
+``` java
+int x = sc.nextInt();  // 2
+for (int j=0; i<x; i++) {
+    //////////////////////
+}
+```
 Now inside this loop, we need to make our structure for the input. We now need to take `M` and `N` inside the loop's first line. Let's do it:
 
-    
-    int x = sc.nextInt();  // 2
+``` java
+int x = sc.nextInt();  // 2
 
-    for (int j=0; i<x; i++) {
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        //////////////////////
-    }
-
+for (int j=0; i<x; i++) {
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+    //////////////////////
+}
+```
 Remember, we're hardcoding, we give a f about the task. We're only matching inputs, but our outputs are already determined. 
 
 So, lets take two arrays `u` and `v`.
 
-    
-    int x = sc.nextInt();  // 2
+``` java    
+int x = sc.nextInt();  // 2
 
-    for (int j=0; i<x; i++) {
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+for (int j=0; i<x; i++) {
+    int n = sc.nextInt();
+    int m = sc.nextInt();
 
-        int[] u = new int[m];
-        int[] u = new int[m];
-        //////////////////////
-    }
+    int[] u = new int[m];
+    int[] u = new int[m];
+    //////////////////////
+}
+```
 Now, we start our second loop (which will take line by line input for `u[i]` and `v[i]`):
+``` java
+int x = sc.nextInt();  // 2
 
-    int x = sc.nextInt();  // 2
+for (int j=0; i<x; i++) {
+    int n = sc.nextInt();
+    int m = sc.nextInt();
 
-    for (int j=0; i<x; i++) {
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-
-        int[] u = new int[m];
-        int[] u = new int[m];
-        
-        for (int i=0; i<m; i++) {
-            u[i] = sc.nextInt();
-            v[i] = sc.nextInt();
-        }
-        //////////////////////
+    int[] u = new int[m];
+    int[] u = new int[m];
+    
+    for (int i=0; i<m; i++) {
+        u[i] = sc.nextInt();
+        v[i] = sc.nextInt();
     }
+    //////////////////////
+}
+```
 
 Alright, our input structure is now complete.
 
@@ -245,74 +247,81 @@ Now, let's manually write these values and find mismatches.
 
 #### input 1
 ##### instance 1
-    n = 8
-    m = 6
-    u = [1, 2, 4, 6, 7, 2]
-    v = [6, 2, ...]
-
+``` java
+n = 8
+m = 6
+u = [1, 2, 4, 6, 7, 2]
+v = [6, 2, ...]
+```
 ##### instance 2
-    n = 4
-    m = 6
-    u = [1, 1, 1, 2, 2, 3]
-    v = [2, 3, ...]
-
+``` java
+n = 4
+m = 6
+u = [1, 1, 1, 2, 2, 3]
+v = [2, 3, ...]
+```
 #### output 1   
 So, we can imply if `n` is `8`, output is `0`. And if `n` is `4`, output is `3`
 
 Let's see if it holds or not.
 #### input 2
 ##### instance 1
-    n = 9
-    m = 15
-    u = [1, 2, 3, 4, 3, 5, 6, 8, 9, 1, 7, 1, 9, 3, 5]
-    v = [2, 3, ...]
-
+``` java
+n = 9
+m = 15
+u = [1, 2, 3, 4, 3, 5, 6, 8, 9, 1, 7, 1, 9, 3, 5]
+v = [2, 3, ...]
+```
 ##### instance 2
-    n = 2
-    m = 1
-    u = [1]
-    v = [2]
+``` java
+n = 2
+m = 1
+u = [1]
+v = [2]
+```
 #### output 2   
 we can imply if `n` is `9`, output is `7`. And if `n` is `2`, output is `0`
 
 Now, apparently, we have the best case scenario here. All our given `n`s are different: `8, 4, 9, 2`
 
 So, we can write a output logic that depends on `n` solely:
-
-    if (n==8) 
-        System.out.println("0");
-    else if (n==4) 
-        System.out.println("3");
-    else if (n==9) 
-        System.out.println("7");
-    else if (n==2) 
-        System.out.println("0");
-
+``` java
+if (n==8) 
+    System.out.println("0");
+else if (n==4) 
+    System.out.println("3");
+else if (n==9) 
+    System.out.println("7");
+else if (n==2) 
+    System.out.println("0");
+```
 You're done! Now put it back into our main code:
 
-    int x = sc.nextInt();  // 2
+```java
+int x = sc.nextInt();
 
-    for (int j=0; i<x; i++) {
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+for (int j = 0; j < x; j++) {
+    int n = sc.nextInt();
+    int m = sc.nextInt();
 
-        int[] u = new int[m];
-        int[] u = new int[m];
-        
-        for (int i=0; i<m; i++) {
-            u[i] = sc.nextInt();
-            v[i] = sc.nextInt();
-        }
-        
-        if (n==8) 
-            System.out.println("0");
-        else if (n==4) 
-            System.out.println("3");
-        else if (n==9) 
-            System.out.println("7");
-        else if (n==2) 
-            System.out.println("0");
+    int[] u = new int[m];
+    int[] v = new int[m];
+
+    for (int i = 0; i < m; i++) {
+        u[i] = sc.nextInt();
+        v[i] = sc.nextInt();
     }
+
+    if (n == 8)
+        System.out.println("0");
+    else if (n == 4)
+        System.out.println("3");
+    else if (n == 9)
+        System.out.println("7");
+    else if (n == 2)
+        System.out.println("0");
+}
+```
 
 
 So, if we're to build an algorithm for it (lets call it HC algo):
@@ -323,3 +332,5 @@ So, if we're to build an algorithm for it (lets call it HC algo):
 4. Then Identify the simplest mismatch across all given input. (This is crucial, as the variable we're targetting must be different for all different outputs. It's like one-one function. For `a`, if it pops out `b` it *must* always pop `b` out. it *cannot* pop `c` out)
 5. Then for our variable, write an output logic that holds.
 6. Run the *hard*code. And MAGIC!
+
+
