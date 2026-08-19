@@ -1,17 +1,17 @@
 # Task
 
-Given a simple undirected unweighted graph with `N` nodes and `M` edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from `1` to `N`.
+Given a simple undirected unweighted graph with $N$ nodes and $M$ edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from $1$ to $N$.
 
 # Input
 
-First line contains the number of tests. The description of each test follows. Each test is described by `(M+1)` lines. First line contains `N`, `M`. Each of the next `M` lines contains `U[i]` and `V[i]` indicating that there is an edge between `U[i]` and `V[i]`.
+First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
 # Output
 
 For each test in the given order, print an integer, the answer you are asked to find in this task, in one line.
 
-# Example-1 (batch-1)
+# Example-1 (`batch-1`)
 
-## Input (stdin)
+## Input (`stdin`)
 
 	2
 	8 6
@@ -29,14 +29,14 @@ For each test in the given order, print an integer, the answer you are asked to 
 	2 4
 	3 4
 
-## Output (stdout)
+## Output (`stdout`)
 
 	0
 	3
 
-# Example-2 (batch-2)
+# Example-2 (`batch-2`)
 
-## Input (stdin)
+## Input (`stdin`)
 
 	2
 	9 15
@@ -58,7 +58,7 @@ For each test in the given order, print an integer, the answer you are asked to 
 	2 1
 	1 2
 
-## Output (stdout)
+## Output (`stdout`)
 
 	7
 	0
@@ -100,11 +100,8 @@ For each test in the given order, print an integer, the answer you are asked to 
 # How to Hard Code
 
 Um so this is our task at hand:
-    
-    Given a simple undirected unweighted graph with N nodes
-    and M edges, find the minimum number of edges necessary 
-    to remove from the graph to make the graph have no cycle
-    remaining. The nodes are numbered from 1 to N.
+
+> Given a simple undirected unweighted graph with $N$ nodes and $M$ edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from $1$ to $N$.
 
 As we're just gonna do some hardcoding shit here we dont give a f to that.
 
@@ -112,11 +109,7 @@ Instead we'll start looking at our inputs first. and try to identify the simples
 
 Before we start doing that, let's just have a quick glance at our input output instructions, so we know how they're structured. It's gonna help, sit tight.
 
-    First line contains the number of tests. The description 
-    of each test follows. Each test is described by (M+1) 
-    lines. First line contains N, M. Each of the next M lines 
-    contains U[i] and V[i] indicating that there is an 
-    edge between U[i] and V[i].
+>First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
 
 So our first and second input both has same number of tests so lets compare them one by one:
 
@@ -177,11 +170,7 @@ So, lets start coding for the input side.
 
 Recall:
 
-    First line contains the number of tests. The description 
-    of each test follows. Each test is described by (M+1) 
-    lines. First line contains N, M. Each of the next M lines 
-    contains U[i] and V[i] indicating that there is an 
-    edge between U[i] and V[i].
+>First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
 
 first we're gonna need a loop:
 ``` java
