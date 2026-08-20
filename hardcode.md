@@ -195,6 +195,10 @@ for (int j=0; j<x; j++) {
     //////////////////////
 }
 ```
+
+> Note: I don't actually know how input in `java` works. Like how to take 2 or more inputs from a single line. And I know that `sc.nextInt();` is a very basic input line, I also do not know how pro `java` coders handle that. Still, I am just trying to explain the idea here. Replacing my dummy input lines with actual input formats, I'll leave that as an exercise for the reader:)
+
+
 Remember, we're *hard*coding, we give a f about the task. We're only matching inputs, but our outputs are already determined. 
 
 So, lets take two arrays `u` and `v`.
@@ -211,6 +215,7 @@ for (int j=0; j<x; j++) {
     //////////////////////
 }
 ```
+
 Now, we start our second loop (which will take line by line input for `u[i]` and `v[i]`):
 ``` java
 int x = sc.nextInt();  // 2
