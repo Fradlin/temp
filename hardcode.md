@@ -4,7 +4,7 @@ Given a simple undirected unweighted graph with $N$ nodes and $M$ edges, find th
 
 # Input
 
-First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
+First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and $V[i]$.
 # Output
 
 For each test in the given order, print an integer, the answer you are asked to find in this task, in one line.
@@ -89,13 +89,13 @@ For each test in the given order, print an integer, the answer you are asked to 
 
 # Time limit
 
-1s (cpp) or 1.5s (java) or 3s (py) per batch.
+1s (`cpp`) or 1.5s (`java`) or 3s (`py`) per batch.
 
 # Hints
 
 - Use fast input/output methods.  
 - 0.2 score for passing only sample batches.  
-- O(N+M) solution is expected.
+- $O(N+M)$ solution is expected.
 
 # How to Hard Code
 
@@ -109,9 +109,9 @@ Instead we'll start looking at our inputs first. and try to identify the simples
 
 Before we start doing that, let's just have a quick glance at our input output instructions, so we know how they're structured. It's gonna help, sit tight.
 
->First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
+>First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and $V[i]$.
 
-So our first and second input both has same number of tests so lets compare them one by one:
+So our first and second input both have same number of tests so lets compare them one by one:
 
 #### input 1
 
@@ -164,19 +164,19 @@ Let's bring outputs here too:
     7
     0
 
-So, we can notice that they start showing dissimaliarities from line 2. But for this to work, we must take all the inputs, don't we?
+So, we can't help but notice that they start showing dissimaliarities from line 2. But for this to work, we must take all the inputs, don't we?
 
-So, lets start coding for the input side.
+Let's start coding for the inputs.
 
 Recall:
 
->First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and V[i].
+>First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and $V[i]$.
 
-first we're gonna need a loop:
+First we're gonna need a loop and the loop is gonna run $x$ times, so:
 ``` java
 int x = (our first line of input; in these cases, 2)
 ```
-Now, note that we can just hard code `x = 2` here because that'll break the input structure.
+Now, note that we cannot just hard code `x = 2` here because, that'll break the input structure.
 So, we just write something like the following: 
 ``` java
 int x = sc.nextInt();  // 2
