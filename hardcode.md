@@ -103,7 +103,7 @@ Um so this is our task at hand:
 
 > Given a simple undirected unweighted graph with $N$ nodes and $M$ edges, find the minimum number of edges necessary to remove from the graph to make the graph have no cycle remaining. The nodes are numbered from $1$ to $N$.
 
-As we're just gonna do some *hard*coding shit here we dont give a f to that.
+As we're just gonna do some *hard*coding shit here, we don't give a f to that.
 
 Instead we'll start looking at our inputs first. and try to identify the simplest mismatches in the ***input***.
 
