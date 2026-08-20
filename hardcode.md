@@ -278,7 +278,7 @@ we can imply if `n` is `9`, output is `7`. And if `n` is `2`, output is `0`
 
 Now, apparently, we have the best case scenario here. All our given `n`s are different: `8, 4, 9, 2`
 
-So, we can write a output logic that depends on `n` solely:
+So, we can write an output logic that depends on `n` solely:
 ``` java
 if (n==8) 
     System.out.println("0");
