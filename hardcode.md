@@ -289,7 +289,7 @@ else if (n==9)
 else if (n==2) 
     System.out.println("0");
 ```
-You're done! Now put it back into our main code:
+We're done! Now, let's put it back into our main code:
 
 ```java
 int x = sc.nextInt();
@@ -318,12 +318,12 @@ for (int j = 0; j < x; j++) {
 ```
 
 
-So, if we're to build an algorithm for it (lets call it HC algo):
+So, if we're to build an algorithm for it (let's call it 'HC Algo'):
 
-### HC algo
-1. First build a structure to get all the inputs.
+### HC Algo
+1. First, build a structure to get all the inputs.
 2. Manually trace which input we're storing at which variable/data structure.
 3. Also, write down what type of output we're getting for what value of the given inputs.
 4. Then Identify the simplest mismatch across all given input. (This is crucial, as the variable we're targetting must be different for all different outputs. It's like one-one function. For `a`, if it pops out `b` it *must* always pop `b` out. it *cannot* pop `c` out)
 5. Then for our variable, write an output logic that holds.
-6. Run the *hard*code. And MAGIC!
+6. Run the *hard*code. And BOOM!
