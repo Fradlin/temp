@@ -105,13 +105,13 @@ Um so this is our task at hand:
 
 As we're just gonna do some *hard*coding shit here, we don't give a f to that.
 
-Instead we'll start looking at our inputs first. and try to identify the simplest mismatches in the ***input***.
+Instead, we'll start by looking at our inputs first. and try to identify the simplest mismatches in the ***input***.
 
 Before we start doing that, let's just have a quick glance at our input output instructions, so we know how they're structured. It's gonna help, sit tight.
 
 >First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and $V[i]$.
 
-So our first and second input both have same number of tests so lets compare them one by one:
+So, our first and second input both have the same number of tests. So, let's compare them one by one:
 
 #### input 1
 
@@ -164,7 +164,7 @@ Let's bring outputs here too:
     7
     0
 
-So, we can't help but notice that they start showing dissimaliarities from line 2. But for this to work, we must take all the inputs, don't we?
+So, we can't help but notice that they start showing dissimilarities from line 2. But for this to work, we must take all the inputs, don't we?
 
 Let's start coding for the inputs.
 
@@ -172,7 +172,7 @@ Recall:
 
 >First line contains the number of tests. The description of each test follows. Each test is described by $(M+1)$ lines. First line contains $N$, $M$. Each of the next $M$ lines contains $U[i]$ and $V[i]$ indicating that there is an edge between $U[i]$ and $V[i]$.
 
-First we're gonna need a loop and the loop is gonna run $x$ times, so:
+First, we're gonna need a loop and the loop is gonna run $x$ times, so:
 ``` java
 int x  // (our first line of input; in these cases, 2)
 ```
@@ -315,6 +315,7 @@ for (int j = 0; j < x; j++) {
 
 So, if we're to build an algorithm for it (lets call it HC algo):
 
+### HC algo
 1. First build a structure to get all the inputs.
 2. Manually trace which input we're storing at which variable/data structure.
 3. Also, write down what type of output we're getting for what value of the given inputs.
